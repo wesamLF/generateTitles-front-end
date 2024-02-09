@@ -51,7 +51,7 @@ const ContactForm = () => {
             .then(() => {
                 setIsLoading(false)
                 toast({
-                    className:"bg-green-500 border-0",
+                    className: "bg-green-500 border-0",
                     description: <p className="text-base font-normal text-white">"Your message has been sent."</p>,
                 })
             }, (error) => {
@@ -72,13 +72,13 @@ const ContactForm = () => {
                     <h1 className="text-2xl md:text-4xl font-bold text-center">Contact Form</h1>
                     <p className="text-base md:text-lg text-muted-foreground">Help us to improve our system. We are open to any suggestions and questions. Feel free to contact us.</p>
                 </div>
-                vvvv
+
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(sendEmail)} className="space-y-3" >
                         <FormField
                             control={form.control}
                             name="email"
-                            render={({ field }) => (
+                            render={({field}) => (
                                 <FormItem>
                                     <FormLabel>Email</FormLabel>
                                     <FormControl>
@@ -92,7 +92,7 @@ const ContactForm = () => {
                         <FormField
                             control={form.control}
                             name="subject"
-                            render={({ field }) => (
+                            render={({ field}) => (
                                 <FormItem>
                                     <FormLabel>Subject</FormLabel>
                                     <FormControl>
@@ -106,7 +106,7 @@ const ContactForm = () => {
                         <FormField
                             control={form.control}
                             name="message"
-                            render={({ field }) => (
+                            render={({ field}) => (
                                 <FormItem>
                                     <FormLabel>message</FormLabel>
                                     <FormControl>
@@ -114,7 +114,9 @@ const ContactForm = () => {
                                             placeholder="message"
                                             className="resize-none"
                                             {...field}
-                                        />                                    </FormControl>
+                                        />               
+
+                                                             </FormControl>
 
                                     <FormMessage />
                                 </FormItem>
