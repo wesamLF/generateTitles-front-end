@@ -43,11 +43,11 @@ const ContactForm = () => {
     const [isLoading, setIsLoading] = useState(false)
     async function sendEmail(values: z.infer<typeof formSchema>) {
         setIsLoading(true)
-        emailjs.send('service_0uu24uf', 'template_9k670fm', {
+        emailjs.send(import.meta.env.VITE_SERIVES_KEY, import.meta.env.VITE_TEMPLATE_KEY, {
             subject: values.subject,
             email: values.email,
             message: values.message
-        }, 'ZK4zv8rYllGkU9Ai4')
+        }, import.meta.env.VITE_EMAIL_KEY)
             .then(() => {
                 setIsLoading(false)
                 toast({
@@ -72,6 +72,7 @@ const ContactForm = () => {
                     <h1 className="text-2xl md:text-4xl font-bold text-center">Contact Form</h1>
                     <p className="text-base md:text-lg text-muted-foreground">Help us to improve our system. We are open to any suggestions and questions. Feel free to contact us.</p>
                 </div>
+                vvvv
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(sendEmail)} className="space-y-3" >
                         <FormField

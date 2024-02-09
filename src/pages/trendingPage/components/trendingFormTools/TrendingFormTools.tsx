@@ -36,11 +36,11 @@ const TrendingFormTools = ({ fetchData, loading }:
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     if (clickedBtn === "genres") {
-      fetchData(`http://localhost:5000/trending/${data.genre}/genres`, "genres", data.genre)
+      fetchData(`${import.meta.env.VITE_BE_URL}/trending/${data.genre}/genres`, "genres", data.genre)
       navigate(`./${clickedBtn}`)
 
     } else if (clickedBtn === "trending") {
-      fetchData(`http://localhost:5000/trending/${data.genre}`,"trending", data.genre)
+      fetchData(`${import.meta.env.VITE_BE_URL}/trending/${data.genre}`,"trending", data.genre)
       navigate(`./${clickedBtn}`)
     }
 

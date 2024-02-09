@@ -36,11 +36,11 @@ const GenerateTitlesFormTools = ({ fetchData, loading }:
   function onSubmit(data: z.infer<typeof generateTitlesFormSchema>) {
 
     if (clickedBtn === "ai") {
-      fetchData(`http://localhost:5000/generate/titles/ai/${data.topic}`, "ai", data.topic)
+      fetchData(`${import.meta.env.VITE_BE_URL}/generate/titles/ai/${data.topic}`, "ai", data.topic)
       navigate(`./${clickedBtn}`)
 
     } else if (clickedBtn === "mostviewed") {
-      fetchData(`http://localhost:5000/generate/titles/mostviewed/${data.topic}`, "mostviewed", data.topic)
+      fetchData(`${import.meta.env.VITE_BE_URL}/generate/titles/mostviewed/${data.topic}`, "mostviewed", data.topic)
 
       navigate(`./${clickedBtn}`)
     }
@@ -55,10 +55,10 @@ const GenerateTitlesFormTools = ({ fetchData, loading }:
         <form onSubmit={form.handleSubmit(onSubmit)} className="">
           <div className="flex flex-col md:flex-row items-center md:items-end justify-center md:justify-between w-full p-6 gap-5">
             <div className="  flex justify-center items-center w-full md:w-1/4  ">
-              <GenerateTitlesGenreSelector  setSelectedGenre={setSelectedGenre} />
+              <GenerateTitlesGenreSelector setSelectedGenre={setSelectedGenre} />
             </div>
             <div className="  flex justify-center items-center w-full md:w-1/4  ">
-              <TopicSelector form={form} selectedGenre={selectedGenre}/>
+              <TopicSelector form={form} selectedGenre={selectedGenre} />
             </div>
 
 

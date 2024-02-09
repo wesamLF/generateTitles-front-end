@@ -14,7 +14,7 @@ const DownloadBtn = ({ data }: { data: trendingDataType }) => {
     const { toast } = useToast()
     const downloadFile = async () => {
      try {
-            const res = await axios.post('http://localhost:5000/download/csv', {
+            const res = await axios.post(`${import.meta.env.VITE_BE_URL}/download/csv`, {
                 data
             }, {
                 responseType: "blob",
