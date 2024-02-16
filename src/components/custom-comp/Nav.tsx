@@ -1,3 +1,4 @@
+import { Github } from "lucide-react"
 import { useState } from "react"
 import { NavLink } from "react-router-dom"
 
@@ -33,6 +34,9 @@ const Nav = () => {
                         </li>
                         <li>
                             <NavLink to="../../contact"  className="block  hover:text-gray-400 py-2 px-3 md:p-0">Contact</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="https://github.com/wesamLF" target="_blank" className="block  hover:text-gray-400 py-2 px-3 md:p-0"><Github /></NavLink>
                         </li>
                     </ul>
                 </div>

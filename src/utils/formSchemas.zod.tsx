@@ -7,7 +7,7 @@
 
 
 export type langAndGenreType = {
-  lang: "arabic" | "english",
+  lang: "english",
   genre: "gaming" | "movies" | "now" | "music",
 }
 export type generateTitlesFormType = {
@@ -16,11 +16,3 @@ export type generateTitlesFormType = {
 }
 
 
-// export const generateTitlesFormSchema = z.object({
-//   lang: z.enum(["english", "arabic"], {
-//     required_error: "You need to select a lang type.",
-//   }),
-//   tobic: z.enum(tobicsArray as [string, ...string[]], {
-//     required_error: "You need to select a tobic.",
-//   }),
-// })

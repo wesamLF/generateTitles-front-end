@@ -39,7 +39,6 @@ function LangSelector({ form }: {
                             </SelectTrigger>
                         </FormControl>
                         <SelectContent className="text-base">
-                            <SelectItem value="arabic" >arabic</SelectItem>
                             <SelectItem value="english">english</SelectItem>
 
                         </SelectContent>
