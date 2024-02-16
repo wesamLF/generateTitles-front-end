@@ -18,7 +18,6 @@ export default function useFetchGenerateTitlesData() {
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
     const fetchData = (url: string, to: string, topic: string) => {
-        console.log("urrrrl", url)
         setError(false)
         setLoading(true)
         if (to == "ai" && data.fromAi.data.length == 0 || to == "ai" && topic != data.fromAi.topic) {
