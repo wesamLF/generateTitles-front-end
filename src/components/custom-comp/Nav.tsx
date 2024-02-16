@@ -36,7 +36,7 @@ const Nav = () => {
                             <NavLink to="../../contact"  className="block  hover:text-gray-400 py-2 px-3 md:p-0">Contact</NavLink>
                         </li>
                         <li>
-                            <NavLink to="https://github.com/wesamLF" target="_blank" className="block  hover:text-gray-400 py-2 px-3 md:p-0"><Github /></NavLink>
+                            <NavLink to="https://github.com/wesamLF/wee-titles" target="_blank" className="block  hover:text-gray-400 py-2 px-3 md:p-0"><Github /></NavLink>
                         </li>
                     </ul>
                 </div>

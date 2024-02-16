@@ -13,7 +13,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 const FormSchema = z.object({
-  lang: z.enum(["english", "arabic"], {
+  lang: z.enum(["english"], {
     required_error: "You need to select a language.",
   }),
   genre: z.enum(["gaming" , "movies" , "now" , "music"], {
